@@ -67,11 +67,15 @@ button {
 
 .fait-btn {
   background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  color: white;
+  color: #00a51e;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
 }
 .fait-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(67,233,123,0.4);
+  background: #00a51e;
+  color: white;
 }
 
 ul {
