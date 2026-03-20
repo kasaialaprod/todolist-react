@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Todo = {
   text: string;
@@ -6,8 +6,15 @@ type Todo = {
 };
 
 export function TodoList() {
-    const [todos, setTodos] = useState<Todo[]>([]);
+    const [todos, setTodos] = useState<Todo[]>(() => {
+        const saved = localStorage.getItem("todos");
+        return saved ? JSON.parse(saved) : [];
+    });
     const [inputValue, setInputValue] = useState('');
+
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
 
     const ajouterTodo = () => {
         if (inputValue.trim() !== '') {
