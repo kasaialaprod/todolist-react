@@ -134,6 +134,10 @@ li:hover {
     text-align: center;
   }
   
+  .ajouter-btn{
+    width: 100%;
+  }
+
   .supprimer-btn {
     width: 100%;
   }
