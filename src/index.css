@@ -133,12 +133,8 @@ li:hover {
     gap: 1rem;
     text-align: center;
   }
-  
-  .ajouter-btn{
-    width: 100%;
-  }
 
-  .supprimer-btn {
+  .supprimer-btn , .fait-btn {
     width: 100%;
   }
 }
