@@ -1,12 +1,9 @@
 const CACHE_NAME = "mon-app-v1";
 const ASSETS_TO_CACHE = [
   "./",
-  "./index.html",
-  "./style.css",
-  "./app.js",
   "./manifest.json",
-  "./icons/icon.png",
-  "./icons/icon.png"
+  "./icons/icon-192.png",
+  "./icons/icon-512.png"
 ];
 
 self.addEventListener("install", (event) => {
