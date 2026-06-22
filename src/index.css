@@ -1,9 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #3b3a3d;
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+
+header {
+  padding: 50px;
+  text-align: center;
+  background: #667eea;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+main {
+  padding: 50px;
+}
+
+.todo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-content: center;
+}
+
+.todoCase{
+  display: grid;
+  width: 10.5rem;
+  height: 12rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #38f9d7;
+}
+
+.todo-case {
+  width: 10rem;
+  height: 10rem;
+  background: #667eea;
+  border: 2px solid #38f9d7;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38f9d7;
+  font-size: 40px;
+}
+
+
+
 .container-todo {
   max-width: 500px;
   margin: 2rem auto;
@@ -13,6 +67,7 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
 
 .input-section {
   display: flex;

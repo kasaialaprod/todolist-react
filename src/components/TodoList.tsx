@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 type Todo = {
   text: string;
@@ -6,15 +7,17 @@ type Todo = {
 };
 
 export function TodoList() {
+    const { id } = useParams();
+
     const [todos, setTodos] = useState<Todo[]>(() => {
-        const saved = localStorage.getItem("todos");
+        const saved = localStorage.getItem(`todos-${id}`);
         return saved ? JSON.parse(saved) : [];
     });
     const [inputValue, setInputValue] = useState('');
 
     useEffect(() => {
-        localStorage.setItem("todos", JSON.stringify(todos));
-    }, [todos]);
+        localStorage.setItem(`todos-${id}`, JSON.stringify(todos));
+    }, [todos, id]);
 
     const ajouterTodo = () => {
         if (inputValue.trim() !== '') {
@@ -57,4 +60,9 @@ export function TodoList() {
 
         </>
     );
+}
+export function TodoId() {
+  const { id } = useParams();
+
+  return {id};
 }
