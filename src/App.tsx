@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/todolist-react">
       <Routes>
         <Route path="/todolist-react/" element={<HomePage />} />
         <Route path="/todolist-react/todo/:id" element={<TodoList />} />
