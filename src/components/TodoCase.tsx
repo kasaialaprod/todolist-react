@@ -30,6 +30,10 @@ export function TodoCase() {
     setLists((prevLists) => [...prevLists, newList]);
   }
 
+  function removeTodoCase(id: number) {
+    setLists((prevLists) => prevLists.filter((list) => list.id !== id));
+  }
+
   useEffect(() => {
     localStorage.setItem("todoLists", JSON.stringify(lists));
   }, [lists]);
@@ -39,7 +43,15 @@ export function TodoCase() {
       {lists.map((list) => (
         <div className="todoCase" key={list.id}>
           <NavLink to={`todo/${list.id}`}>
-            <div className="todo-case"></div>
+            <div className="todo-case">
+              <div className="remove-btn" onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                removeTodoCase(list.id);
+              }}>
+                X
+              </div>
+            </div>
           </NavLink>
           <p className="case-name">{list.name}</p>
         </div>

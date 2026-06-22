@@ -44,6 +44,7 @@ main {
 }
 
 .todo-case {
+  position: relative;
   width: 10rem;
   height: 10rem;
   background: #667eea;
@@ -54,6 +55,63 @@ main {
   justify-content: center;
   color: #38f9d7;
   font-size: 40px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.todo-case:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+.todoCase a,
+.todoCase a:visited,
+.todoCase a:hover,
+.todoCase a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.todoCase a:focus-visible {
+  outline: 2px solid #38f9d7;
+  outline-offset: 4px;
+  border-radius: 15px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: linear-gradient(135deg, #ff6b6b, #e63946);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.35);
+  z-index: 2;
+}
+
+.remove-btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #ff4d4d, #c9182b);
+  box-shadow: 0 6px 14px rgba(230, 57, 70, 0.45);
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}
+
+.remove-btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 
