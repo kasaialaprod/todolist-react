@@ -30,7 +30,8 @@
     {
       "src": "/todolist-react/screenshots/mobile.png",
       "sizes": "390x844",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ]
 }
